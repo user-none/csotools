@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+
+[project]
+name = "csotools"
+version = "1.0.0"
+authors = [
+    { name = "John Schember", email = "john@nachtimwald.com" },
+]
+
+description = "CSO compress and decompress"
+readme = "README.md"
+license = { file = "LICENSE"  }
+
+requires-python = ">=3.11.0"
+
+[project.scripts]
+csotools = "csotools.main_cli:main"
