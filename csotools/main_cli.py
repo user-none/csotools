@@ -43,7 +43,7 @@ def compress_cso(fin, fout, level, stats=False):
     if stats:
         fin.seek(0, os.SEEK_END)
         fout.seek(0, os.SEEK_END)
-        print('compressed: {p}% smaller'.format(p=int(fout.tell()/fin.tell()*100)))
+        print('compressed: {p}% of uncompressed size'.format(p=int(fout.tell()/fin.tell()*100)))
 
 def decompress_cso(fin, fout, stats=False):
     csotools.decompress(fin, fout)
@@ -51,7 +51,7 @@ def decompress_cso(fin, fout, stats=False):
     if stats:
         fin.seek(0, os.SEEK_END)
         fout.seek(0, os.SEEK_END)
-        print('decompressed: {p}% larger'.format(p=int(fout.tell()/fin.tell()*100)))
+        print('decompressed: {p}% of compressed size'.format(p=int(fout.tell()/fin.tell()*100)))
 
 def main():
     args = parse_args()

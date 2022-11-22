@@ -61,6 +61,8 @@ Each block is compressed independently of other blocks.
 - v1 uses `0` for deflate and `1` for uncompressed data.
 - v2 used `0` for deflate and `1` for LZ4.
 
+If using zlib to compress with deflate the `wbits` parameter must be set to `-15`.
+
 ## Data
 
 Compressed or uncompressed data.
