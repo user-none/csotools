@@ -57,7 +57,7 @@ recommended to use file objects and not in memory file like objects.
 ### `csotools.is_cso(data)`
 
 Checks whether the given data is a CSO file. This only checks the first 4 bytes are the
-CSO file market. It does not validate validate the data. `data` should be at least 4 bytes.
+CSO file marker. `data` should be at least 4 bytes.
 
 ## Example
 
